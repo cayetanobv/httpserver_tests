@@ -10,6 +10,8 @@ $ chmod +x http_benchmarking.sh
 $ ./http_benchmarking.sh > results.log
 ```
 
+All tests are runned with [wrk](https://github.com/wg/wrk).
+
 ## Results
 Benchmark results:
 
