@@ -11,7 +11,8 @@ _BHOST="http://127.0.0.1:8090/"
 _BJSON={"Name":"HelloWorld","Types":["hello","world"]}
 
 _PYTHON_SANIC="python3 python/sanic_simplehttpserver.py"
-_GOLANG="./golang/simple_http_server_json"
+_GOLANG_STD="./golang/simple_http_server_json"
+_GOLANG_VALYALA="./golang/valyala_simple_httpserver"
 _NODEJS="node nodejs/simple_httpserver_json.js"
 _PYTHON_AIOHTTP="python3 python/aiohttp_simple_http_server.py"
 _PYTHON_AIOHTTP_UVLOOP="python3 python/aiohttp_uvloop_simple_http_server.py"
@@ -19,13 +20,15 @@ _PYTHON_FLASK="python3 python/flask_simple_http_server.py"
 
 declare -a cmds_arr=(
     "${_PYTHON_SANIC}"
-    "${_GOLANG}"
+    "${_GOLANG_STD}"
+    "${_GOLANG_VALYALA}"
     "${_NODEJS}"
     "${_PYTHON_AIOHTTP}"
     "${_PYTHON_AIOHTTP_UVLOOP}"
     "${_PYTHON_FLASK}"
   )
 
+printf "\n[%s]\n" "$(date)"
 printf "\nStarting benchmark...\n"
 printf "\nSimple HTTP Servers with a JSON response:\n %s\n" "${_BJSON}"
 printf "\nVersions:\n"
