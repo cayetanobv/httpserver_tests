@@ -14,5 +14,5 @@ function testHandler(request, response, error) {
 var server = http.createServer(testHandler);
 
 server.listen(PORT, function() {
-    console.log('Serving on ::' + PORT.toString());
+    console.log(`Listening at http://localhost:${PORT.toString()}`);
 });
