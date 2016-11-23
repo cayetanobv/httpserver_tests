@@ -13,9 +13,13 @@ type TestJSON struct {
 }
 
 func main() {
+
+  var addr = "localhost:8090"
+
+  log.Printf("Listening at http://%s", addr)
+
   http.HandleFunc("/", testHandler)
-  log.Print("Listening at http://localhost:8090")
-  http.ListenAndServe(":8090", nil)
+  http.ListenAndServe(addr, nil)
 }
 
 func testHandler(w http.ResponseWriter, r *http.Request) {
