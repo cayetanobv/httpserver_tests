@@ -1,3 +1,4 @@
+
 // Author: Cayetano Benavent, 2016.
 // cayetano.benavent@geographica.gs
 //
@@ -20,18 +21,19 @@
 var http = require('http');
 
 
-const PORT = 8090;
-var responses = {};
+const host = 'localhost';
+const port = 8090;
+var jsonData;
 
 
-function testHandler(request, response, error) {
-  responses = {"Name":"HelloWorld","Types":["hello","world"]};
-  response.end(JSON.stringify(responses));
+function testHandler(req, resp, error) {
+  jsonData = {"Name":"HelloWorld","Types":["hello","world"]};
+  resp.end(JSON.stringify(jsonData));
 }
 
 
 var server = http.createServer(testHandler);
 
-server.listen(PORT, function() {
-    console.log(`Listening at http://localhost:${PORT.toString()}`);
+server.listen(port, host, function() {
+    console.log(`Listening at http://${host}:${port}`);
 });
