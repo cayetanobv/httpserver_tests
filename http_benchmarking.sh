@@ -1,14 +1,3 @@
-
-####################################
-# TESTING HTTP SERVERS - BENCHMARK #
-####################################
-
-
-_BCONNS=400
-_BTHREADS=1
-_BTIME=5
-_BHOST="http://127.0.0.1:8090/"
-_BJSON={"Name":"HelloWorld","Types":["hello","world"]}
 #
 #  Author: Cayetano Benavent, 2016.
 #  cayetano.benavent@geographica.gs
@@ -28,6 +17,17 @@ _BJSON={"Name":"HelloWorld","Types":["hello","world"]}
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #  MA 02110-1301, USA.
 #
+
+####################################
+# TESTING HTTP SERVERS - BENCHMARK #
+####################################
+
+
+_BCONNS=400
+_BTHREADS=1
+_BTIME=5
+_BHOST="http://127.0.0.1:8090/"
+_BJSON={"Name":"HelloWorld","Types":["hello","world"]}
 
 _PYTHON_SANIC="python3 python/sanic_simplehttpserver.py"
 _GOLANG_STD="./golang/simple_http_server_json"
